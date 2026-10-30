@@ -529,7 +529,7 @@ body.locked{overflow:hidden}
 
 <div class="divider"></div>
 
-<!-- PRODUCTS (HORIZONTAL CAROUSEL 2×2) -->
+<!-- PRODUCTS (FILTER + CAROUSEL) -->
 <section id="products" class="py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
   <div class="max-w-7xl mx-auto">
 
@@ -537,7 +537,7 @@ body.locked{overflow:hidden}
       <div class="lg:col-span-7">
         <div class="label mb-5 rv">03 — Produk & Inovasi</div>
         <h2 class="text-3xl md:text-5xl disp font-bold mb-4 rv d1">Ekosistem <span class="grad-brand">24 Produk.</span></h2>
-        <p class="text-gray-400 text-sm md:text-base leading-relaxed rv d2 max-w-xl">Geser horizontal per kategori. Setiap kategori menampilkan 4 produk per view (2×2).</p>
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed rv d2 max-w-xl">Pilih kategori untuk menampilkan produk terkait. Pilih "Semua" untuk melihat seluruh 24 produk.</p>
       </div>
       <div class="lg:col-span-5">
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 rv d2">
@@ -552,155 +552,75 @@ body.locked{overflow:hidden}
     </div>
 
     <div class="flex flex-wrap gap-2 mb-8 rv" role="tablist" id="prodFilter">
-      <button class="tab on px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="ai"><i class="fas fa-brain"></i><span>AI (6)</span></button>
+      <button class="tab on px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="all"><i class="fas fa-layer-group"></i><span>Semua (24)</span></button>
+      <button class="tab px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="ai"><i class="fas fa-brain"></i><span>AI (6)</span></button>
       <button class="tab px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="ea"><i class="fas fa-robot"></i><span>EA/Robot (7)</span></button>
       <button class="tab px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="indikator"><i class="fas fa-chart-line"></i><span>Indikator (3)</span></button>
       <button class="tab px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="strategi"><i class="fas fa-chess-knight"></i><span>Strategi (5)</span></button>
       <button class="tab px-4 py-2.5 rounded-xl text-xs font-bold flex items-center gap-2" data-cat="fitur"><i class="fas fa-tools"></i><span>Fitur (3)</span></button>
     </div>
 
-    <div class="space-y-10">
-
-      <!-- AI (6) -->
-      <div class="prod-cat rv" data-cat="ai">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-brain text-cyan-400"></i></div>
-            <div><h3 class="text-base md:text-lg disp font-bold text-white">Artificial Intelligence</h3><p class="text-[0.6rem] mono text-cyan-400/70 uppercase tracking-wider">6 Produk AI</p></div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="hidden sm:block text-[0.6rem] mono text-gray-500">Geser →</span>
-            <div class="flex gap-1.5">
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-cyan-500/60 hover:bg-cyan-500/10 text-gray-400 hover:text-cyan-400 grid place-items-center transition-all" data-dir="prev" data-cat="ai" aria-label="Sebelumnya"><i class="fas fa-chevron-left text-xs"></i></button>
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-cyan-500/60 hover:bg-cyan-500/10 text-gray-400 hover:text-cyan-400 grid place-items-center transition-all" data-dir="next" data-cat="ai" aria-label="Selanjutnya"><i class="fas fa-chevron-right text-xs"></i></button>
-            </div>
-          </div>
+    <div class="rv">
+      <div class="flex items-center justify-between mb-4">
+        <div id="prodCatInfo" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-layer-group text-cyan-400"></i></div>
+          <div><h3 class="text-base md:text-lg disp font-bold text-white">Semua Produk</h3><p class="text-[0.6rem] mono text-cyan-400/70 uppercase tracking-wider">24 Produk Total</p></div>
         </div>
-        <div class="prod-track-wrap relative">
-          <div class="prod-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3" data-track="ai">
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-comments text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">Chatting Chart AI</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">AI Analyst</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Chat interaktif dengan AI untuk analisis chart real-time. Upload screenshot, dapatkan analisis instan.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">GPT-4</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Vision</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-search text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Screener Basic</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Market Screener</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Screening otomatis 50+ pair dengan indikator dasar. Filter berdasarkan trend, volume, dan momentum.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">50 Pairs</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Basic Filter</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-magnifying-glass-chart text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Screener Pro</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Advanced Screener</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Screening multi-timeframe 100+ pair dengan 20+ indikator, AI scoring, dan real-time alert.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">100+ Pairs</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">AI Score</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-atom text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Quantum</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Neural Engine</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Model neural network kuantum-inspired untuk prediksi arah harga dengan akurasi tinggi.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Neural</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Quant</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-arrow-trend-up text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Trading V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Auto Signal AI</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">AI trading pertama dengan auto signal, entry/SL/TP otomatis, dan risk management.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Auto Signal</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Risk Mgmt</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-bolt text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">ULTIMATE</span></div><h4 class="text-sm font-bold text-white mb-1">AI Trading Pro V2 Ultimate</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Flagship AI</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Flagship AI dengan ensemble model, sentiment integration, dan auto-compounding.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Ensemble</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Sentiment</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> FLAGSHIP</div></div></div>
+        <div class="flex items-center gap-2">
+          <span class="hidden sm:block text-[0.6rem] mono text-gray-500">Geser →</span>
+          <div class="flex gap-1.5">
+            <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-cyan-500/60 hover:bg-cyan-500/10 text-gray-400 hover:text-cyan-400 grid place-items-center transition-all" data-dir="prev" aria-label="Sebelumnya"><i class="fas fa-chevron-left text-xs"></i></button>
+            <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-cyan-500/60 hover:bg-cyan-500/10 text-gray-400 hover:text-cyan-400 grid place-items-center transition-all" data-dir="next" aria-label="Selanjutnya"><i class="fas fa-chevron-right text-xs"></i></button>
           </div>
-          <div class="flex justify-center gap-1.5 mt-3" data-dots="ai"></div>
         </div>
       </div>
 
-      <!-- EA (7) -->
-      <div class="prod-cat rv" data-cat="ea">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-robot text-emerald-400"></i></div>
-            <div><h3 class="text-base md:text-lg disp font-bold text-white">EA / Robot Trading</h3><p class="text-[0.6rem] mono text-emerald-400/70 uppercase tracking-wider">7 Produk EA</p></div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="hidden sm:block text-[0.6rem] mono text-gray-500">Geser →</span>
-            <div class="flex gap-1.5">
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-emerald-500/60 hover:bg-emerald-500/10 text-gray-400 hover:text-emerald-400 grid place-items-center transition-all" data-dir="prev" data-cat="ea" aria-label="Sebelumnya"><i class="fas fa-chevron-left text-xs"></i></button>
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-emerald-500/60 hover:bg-emerald-500/10 text-gray-400 hover:text-emerald-400 grid place-items-center transition-all" data-dir="next" data-cat="ea" aria-label="Selanjutnya"><i class="fas fa-chevron-right text-xs"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="prod-track-wrap relative">
-          <div class="prod-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3" data-track="ea">
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-robot text-emerald-400"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading Free Version</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Gratis Selamanya</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Robot trading gratis untuk pemula. Fitur basic, cocok untuk learning dan testing.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Basic</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Free</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><i class="fas fa-gift"></i> FREE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-hand-pointer text-emerald-400"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading Semi Auto</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Hybrid Manual-Auto</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Anda konfirmasi signal, robot eksekusi. Kontrol penuh dengan bantuan otomasi.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Hybrid</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Confirm</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-wand-magic-sparkles text-emerald-400"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading Custom</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Build Your Own</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Bangun robot trading custom sesuai strategi Anda. Tim kami bantu develop & deploy.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Custom</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Dev Service</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-1 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Generation 1</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Robot generasi pertama dengan strategi fixed, cocok untuk market trending.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Gen 1</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-2 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V2</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Generation 2</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Generasi kedua dengan adaptive strategy, mendeteksi regime market trending vs ranging.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Adaptive</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Multi Regime</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-3 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V3</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Generation 3</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Generasi ketiga dengan multi-strategy engine, korelasi antar pair, dan news filter.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Multi-Strategy</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">News Filter</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-4 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">FLAGSHIP</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V4</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Generation 4 — Ultimate</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Generasi keempat: AI-driven, portfolio risk mgmt, auto-recovery, multi-broker.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">AI-Driven</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Multi-Broker</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> FLAGSHIP</div></div></div>
-          </div>
-          <div class="flex justify-center gap-1.5 mt-3" data-dots="ea"></div>
-        </div>
-      </div>
+      <div class="prod-track-wrap relative">
+        <div class="prod-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3" id="prodTrack">
 
-      <!-- INDIKATOR (3) -->
-      <div class="prod-cat rv" data-cat="indikator">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-line text-purple-400"></i></div>
-            <div><h3 class="text-base md:text-lg disp font-bold text-white">Indikator TradingView</h3><p class="text-[0.6rem] mono text-purple-400/70 uppercase tracking-wider">3 Produk Indikator</p></div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="hidden sm:block text-[0.6rem] mono text-gray-500">Geser →</span>
-            <div class="flex gap-1.5">
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-purple-500/60 hover:bg-purple-500/10 text-gray-400 hover:text-purple-400 grid place-items-center transition-all" data-dir="prev" data-cat="indikator" aria-label="Sebelumnya"><i class="fas fa-chevron-left text-xs"></i></button>
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-purple-500/60 hover:bg-purple-500/10 text-gray-400 hover:text-purple-400 grid place-items-center transition-all" data-dir="next" data-cat="indikator" aria-label="Selanjutnya"><i class="fas fa-chevron-right text-xs"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="prod-track-wrap relative">
-          <div class="prod-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3" data-track="indikator">
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-simple text-purple-400"></i></div><span class="text-[0.45rem] mono font-bold text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/25">INDICATOR</span></div><h4 class="text-sm font-bold text-white mb-1">Indikator TradingView Basic V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Starter Indicator</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Indikator dasar dengan support/resistance, MA, dan basic signal. Cocok pemula.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">Basic</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">S/R</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-column text-purple-400"></i></div><span class="text-[0.45rem] mono font-bold text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/25">INDICATOR</span></div><h4 class="text-sm font-bold text-white mb-1">Indikator TradingView Pro V2</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Professional Indicator</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Indikator pro dengan multi-timeframe, supply/demand zone, dan alert otomatis.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">Multi-TF</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">S/D Zone</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-crown text-purple-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">PREMIUM</span></div><h4 class="text-sm font-bold text-white mb-1">Indikator TradingView Premium V3</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">All-in-One Indicator</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Indikator premium all-in-one: SMC, order block, FVG, liquidity, dan AI scoring.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">SMC</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">AI Score</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">FVG</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
-          </div>
-          <div class="flex justify-center gap-1.5 mt-3" data-dots="indikator"></div>
-        </div>
-      </div>
+          <!-- AI (6) -->
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ai"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-comments text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">Chatting Chart AI</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">AI Analyst</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Chat interaktif dengan AI untuk analisis chart real-time. Upload screenshot, dapatkan analisis instan.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">GPT-4</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Vision</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ai"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-search text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Screener Basic</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Market Screener</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Screening otomatis 50+ pair dengan indikator dasar. Filter trend, volume, momentum.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">50 Pairs</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Basic</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ai"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-magnifying-glass-chart text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Screener Pro</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Advanced Screener</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Screening multi-TF 100+ pair dengan 20+ indikator, AI scoring, real-time alert.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">100+ Pairs</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">AI Score</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ai"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-atom text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Quantum</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Neural Engine</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Neural network kuantum-inspired untuk prediksi arah harga akurasi tinggi.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Neural</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Quant</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ai"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-arrow-trend-up text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/25">AI</span></div><h4 class="text-sm font-bold text-white mb-1">AI Trading V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Auto Signal AI</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">AI trading pertama dengan auto signal, entry/SL/TP otomatis, risk management.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Auto</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Risk</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ai"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-bolt text-cyan-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">ULTIMATE</span></div><h4 class="text-sm font-bold text-white mb-1">AI Trading Pro V2 Ultimate</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Flagship AI</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Flagship AI: ensemble model, sentiment integration, auto-compounding.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Ensemble</span><span class="text-[0.5rem] mono text-cyan-400 bg-cyan-500/10 px-1.5 py-0.5 rounded border border-cyan-500/20">Sentiment</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> FLAGSHIP</div></div></div>
 
-      <!-- STRATEGI (5) -->
-      <div class="prod-cat rv" data-cat="strategi">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chess-knight text-amber-400"></i></div>
-            <div><h3 class="text-base md:text-lg disp font-bold text-white">Strategi MT5</h3><p class="text-[0.6rem] mono text-amber-400/70 uppercase tracking-wider">5 Produk Strategi</p></div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="hidden sm:block text-[0.6rem] mono text-gray-500">Geser →</span>
-            <div class="flex gap-1.5">
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-amber-500/60 hover:bg-amber-500/10 text-gray-400 hover:text-amber-400 grid place-items-center transition-all" data-dir="prev" data-cat="strategi" aria-label="Sebelumnya"><i class="fas fa-chevron-left text-xs"></i></button>
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-amber-500/60 hover:bg-amber-500/10 text-gray-400 hover:text-amber-400 grid place-items-center transition-all" data-dir="next" data-cat="strategi" aria-label="Selanjutnya"><i class="fas fa-chevron-right text-xs"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="prod-track-wrap relative">
-          <div class="prod-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3" data-track="strategi">
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-layer-group text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Strategi Support & Resistance</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Classic Strategy</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Strategi klasik S/R dengan deteksi level otomatis, break & retest confirmation.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">S/R</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Break-Retest</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-lightbulb text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Trading Basic V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Starter Smart</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Strategi smart trading basic dengan indikator konfluensi MA + RSI + MACD.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">MA</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">RSI+MACD</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-fire text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Trading Pro V2</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Advanced Smart</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Versi pro dengan AI confluence scoring, multi-timeframe, dan adaptive SL/TP.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">AI Score</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Multi-TF</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-cloud text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Ichimoku Cloud</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Ichimoku Strategy</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Strategi Ichimoku Cloud dengan kumo breakout, tenkan/kijun cross, chikou confirmation.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Kumo</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">TK Cross</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-line text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Parabolic</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Parabolic SAR Strategy</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Strategi Parabolic SAR dengan trend filter, trailing stop dinamis, dan reversal detection.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">PSAR</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Trailing</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-          </div>
-          <div class="flex justify-center gap-1.5 mt-3" data-dots="strategi"></div>
-        </div>
-      </div>
+          <!-- EA (7) -->
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-robot text-emerald-400"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading Free Version</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Gratis</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Robot trading gratis untuk pemula. Fitur basic untuk learning & testing.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Basic</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Free</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><i class="fas fa-gift"></i> FREE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-hand-pointer text-emerald-400"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading Semi Auto</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Hybrid</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Anda konfirmasi signal, robot eksekusi. Kontrol penuh dengan otomasi.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Hybrid</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Confirm</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-wand-magic-sparkles text-emerald-400"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading Custom</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Build Your Own</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Bangun robot custom sesuai strategi. Tim kami bantu develop & deploy.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Custom</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Dev</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-1 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Gen 1</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Generasi pertama dengan strategi fixed, cocok market trending.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Gen 1</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-2 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V2</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Gen 2</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Adaptive strategy, mendeteksi regime trending vs ranging.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Adaptive</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-3 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/25">EA</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V3</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Gen 3</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Multi-strategy engine, korelasi antar pair, news filter.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Multi</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">News</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="ea"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-4 text-emerald-400 font-bold"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">FLAGSHIP</span></div><h4 class="text-sm font-bold text-white mb-1">Robot Trading V4</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Gen 4 — Ultimate</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">AI-driven, portfolio risk mgmt, auto-recovery, multi-broker.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">AI</span><span class="text-[0.5rem] mono text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Multi-Broker</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> FLAGSHIP</div></div></div>
 
-      <!-- FITUR (3) -->
-      <div class="prod-cat rv" data-cat="fitur">
-        <div class="flex items-center justify-between mb-4">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-tools text-red-400"></i></div>
-            <div><h3 class="text-base md:text-lg disp font-bold text-white">Fitur Pendukung</h3><p class="text-[0.6rem] mono text-red-400/70 uppercase tracking-wider">3 Fitur</p></div>
-          </div>
-          <div class="flex items-center gap-2">
-            <span class="hidden sm:block text-[0.6rem] mono text-gray-500">Geser →</span>
-            <div class="flex gap-1.5">
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-red-500/60 hover:bg-red-500/10 text-gray-400 hover:text-red-400 grid place-items-center transition-all" data-dir="prev" data-cat="fitur" aria-label="Sebelumnya"><i class="fas fa-chevron-left text-xs"></i></button>
-              <button class="prod-nav w-9 h-9 rounded-lg border border-white/10 hover:border-red-500/60 hover:bg-red-500/10 text-gray-400 hover:text-red-400 grid place-items-center transition-all" data-dir="next" data-cat="fitur" aria-label="Selanjutnya"><i class="fas fa-chevron-right text-xs"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="prod-track-wrap relative">
-          <div class="prod-track flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-3" data-track="fitur">
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-calculator text-red-400"></i></div><span class="text-[0.45rem] mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/25">FITUR</span></div><h4 class="text-sm font-bold text-white mb-1">Hitung Modal Automation</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Capital Calculator</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Hitung modal otomatis berdasarkan risk %, lot size, dan pair. Export ke CSV.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Auto Calc</span><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Export</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-calendar-days text-red-400"></i></div><span class="text-[0.45rem] mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/25">FITUR</span></div><h4 class="text-sm font-bold text-white mb-1">Kalender Ekonomi Fundamental Screener</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Economic Calendar</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Kalender ekonomi lengkap dengan filter high-impact news dan screening fundamental per pair.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">News</span><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Fundamental</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-            <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-book text-red-400"></i></div><span class="text-[0.45rem] mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/25">FITUR</span></div><h4 class="text-sm font-bold text-white mb-1">Journal Trading</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Trading Journal</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Jurnal trading dengan analitik performa, equity curve, win rate, dan psikologi trading.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Analytics</span><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Equity</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
-          </div>
-          <div class="flex justify-center gap-1.5 mt-3" data-dots="fitur"></div>
-        </div>
-      </div>
+          <!-- INDIKATOR (3) -->
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="indikator"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-simple text-purple-400"></i></div><span class="text-[0.45rem] mono font-bold text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/25">INDICATOR</span></div><h4 class="text-sm font-bold text-white mb-1">Indikator TradingView Basic V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Starter</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Indikator dasar dengan S/R, MA, basic signal. Cocok pemula.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">Basic</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">S/R</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="indikator"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-column text-purple-400"></i></div><span class="text-[0.45rem] mono font-bold text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/25">INDICATOR</span></div><h4 class="text-sm font-bold text-white mb-1">Indikator TradingView Pro V2</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Professional</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Indikator pro: multi-timeframe, S/D zone, alert otomatis.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">Multi-TF</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">S/D</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="indikator"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-crown text-purple-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">PREMIUM</span></div><h4 class="text-sm font-bold text-white mb-1">Indikator TradingView Premium V3</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">All-in-One</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Premium all-in-one: SMC, order block, FVG, liquidity, AI scoring.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">SMC</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">AI</span><span class="text-[0.5rem] mono text-purple-400 bg-purple-500/10 px-1.5 py-0.5 rounded border border-purple-500/20">FVG</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
 
+          <!-- STRATEGI (5) -->
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="strategi"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-layer-group text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Strategi Support & Resistance</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Classic</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">S/R dengan deteksi level otomatis, break & retest confirmation.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">S/R</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Retest</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="strategi"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-lightbulb text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Trading Basic V1</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Starter Smart</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Konfluensi MA + RSI + MACD untuk entry presisi.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">MA</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">RSI+MACD</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="strategi"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-fire text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Trading Pro V2</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Advanced</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">AI confluence scoring, multi-TF, adaptive SL/TP.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">AI</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Multi-TF</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-amber-400"><i class="fas fa-crown"></i> PREMIUM</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="strategi"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-cloud text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Ichimoku Cloud</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Ichimoku</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Kumo breakout, tenkan/kijun cross, chikou confirmation.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Kumo</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">TK</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="strategi"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-chart-line text-amber-400"></i></div><span class="text-[0.45rem] mono font-bold text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/25">STRATEGI</span></div><h4 class="text-sm font-bold text-white mb-1">Smart Parabolic</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Parabolic SAR</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Trend filter, trailing stop dinamis, reversal detection.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">PSAR</span><span class="text-[0.5rem] mono text-amber-400 bg-amber-500/10 px-1.5 py-0.5 rounded border border-amber-500/20">Trailing</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+
+          <!-- FITUR (3) -->
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="fitur"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-calculator text-red-400"></i></div><span class="text-[0.45rem] mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/25">FITUR</span></div><h4 class="text-sm font-bold text-white mb-1">Hitung Modal Automation</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Calculator</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Hitung modal otomatis berdasarkan risk %, lot, pair. Export CSV.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Auto</span><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Export</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="fitur"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-calendar-days text-red-400"></i></div><span class="text-[0.45rem] mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/25">FITUR</span></div><h4 class="text-sm font-bold text-white mb-1">Kalender Ekonomi Fundamental</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Economic Calendar</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Filter high-impact news dan screening fundamental per pair.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">News</span><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Fund</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+          <div class="prod-card-slot snap-start shrink-0 w-[calc(50%-0.5rem)]" data-cat="fitur"><div class="glass bracket rounded-2xl p-4 sm:p-5 h-full"><div class="flex items-start justify-between mb-3"><div class="w-11 h-11 rounded-xl bg-red-500/15 border border-red-500/30 grid place-items-center flex-shrink-0"><i class="fas fa-book text-red-400"></i></div><span class="text-[0.45rem] mono font-bold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/25">FITUR</span></div><h4 class="text-sm font-bold text-white mb-1">Journal Trading</h4><p class="text-[0.6rem] mono text-gray-500 mb-2">Trading Journal</p><p class="text-[0.7rem] text-gray-400 leading-relaxed mb-3">Jurnal dengan analitik performa, equity curve, win rate, psikologi.</p><div class="flex flex-wrap gap-1 mb-2"><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Analytics</span><span class="text-[0.5rem] mono text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded border border-red-500/20">Equity</span></div><div class="flex items-center gap-1 text-[0.55rem] mono text-emerald-400"><span class="w-1 h-1 rounded-full bg-emerald-500 animate-pulse"></span> LIVE</div></div></div>
+
+        </div>
+        <div class="flex justify-center gap-1.5 mt-3" id="prodDots"></div>
+      </div>
     </div>
 
     <div class="glass bracket rounded-2xl p-6 md:p-10 rv mt-12">
       <div class="grid grid-cols-3 md:grid-cols-6 gap-4 md:gap-6 items-center">
         <div class="text-center"><div class="text-2xl md:text-3xl disp font-black grad-brand"><span class="cnt" data-t="6">0</span></div><div class="text-[0.5rem] mono text-gray-500 uppercase tracking-widest mt-1">AI</div></div>
-        <div class="text-center border-l border-white/[0.06]"><div class="text-2xl md:text-3xl disp font-black" style="background:linear-gradient(135deg,#00FFA3,#00E5FF);-webkit-background-clip:text;background-clip:text;color:transparent"><span class="cnt" data-t="7">0</span></div><div class="text-[0.5rem] mono text-gray-500 uppercase tracking-widest mt-1">EA/Robot</div></div>
+        <div class="text-center border-l border-white/[0.06]"><div class="text-2xl md:text-3xl disp font-black" style="background:linear-gradient(135deg,#00FFA3,#00E5FF);-webkit-background-clip:text;background-clip:text;color:transparent"><span class="cnt" data-t="7">0</span></div><div class="text-[0.5rem] mono text-gray-500 uppercase tracking-widest mt-1">EA</div></div>
         <div class="text-center border-l border-white/[0.06]"><div class="text-2xl md:text-3xl disp font-black" style="background:linear-gradient(135deg,#A855F7,#00E5FF);-webkit-background-clip:text;background-clip:text;color:transparent"><span class="cnt" data-t="3">0</span></div><div class="text-[0.5rem] mono text-gray-500 uppercase tracking-widest mt-1">Indikator</div></div>
         <div class="text-center border-l border-white/[0.06]"><div class="text-2xl md:text-3xl disp font-black" style="background:linear-gradient(135deg,#FBBF24,#00FFA3);-webkit-background-clip:text;background-clip:text;color:transparent"><span class="cnt" data-t="5">0</span></div><div class="text-[0.5rem] mono text-gray-500 uppercase tracking-widest mt-1">Strategi</div></div>
         <div class="text-center border-l border-white/[0.06]"><div class="text-2xl md:text-3xl disp font-black" style="background:linear-gradient(135deg,#F87171,#FBBF24);-webkit-background-clip:text;background-clip:text;color:transparent"><span class="cnt" data-t="3">0</span></div><div class="text-[0.5rem] mono text-gray-500 uppercase tracking-widest mt-1">Fitur</div></div>
@@ -788,7 +708,7 @@ body.locked{overflow:hidden}
     </div>
     <div class="glass bracket rounded-2xl p-6 sm:p-8 md:p-12 rv mb-12">
       <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
-        <div><div class="label mb-3">Kemitraan Strategis</div><h3 class="text-xl md:text-2xl disp font-bold text-white">Broker Mitra Resmi</h3><p class="text-xs text-gray-400 mt-1">Berdasarkan jumlah pengguna aktif — Q2 2026</p></div>
+        <div><div class="label mb-3">Kemitraan Strategis</div><h3 class="text-xl md:text-2xl disp font-bold text-white">Broker Mitra Resmi</h3><p class="text-xs text-gray-400 mt-1">Berdasarkan pengguna aktif — Q2 2026</p></div>
         <div class="flex items-center gap-2 bg-white/[0.03] px-4 py-2 rounded-lg border border-white/10"><i class="fas fa-award text-amber-400 text-xs"></i><span class="text-xs font-bold text-white mono">LAPORAN KUARTALAN</span></div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
@@ -1088,102 +1008,98 @@ tabs.forEach(t => {
   });
 });
 
-/* PRODUCT CAROUSEL */
+/* PRODUCT CAROUSEL — FILTER + SCROLL */
 (function(){
   function init(){
-    const tracks = document.querySelectorAll('.prod-track');
-    if(!tracks.length) return;
+    const track = document.getElementById('prodTrack');
+    const dotsWrap = document.getElementById('prodDots');
+    const catInfo = document.getElementById('prodCatInfo');
+    if(!track) return;
 
-    tracks.forEach(track => {
-      const cat = track.dataset.track;
-      const dotsWrap = document.querySelector(`[data-dots="${cat}"]`);
-      const slots = track.querySelectorAll('.prod-card-slot');
-      const perView = 4;
-      const totalPages = Math.ceil(slots.length / perView);
+    const allSlots = Array.from(track.querySelectorAll('.prod-card-slot'));
+    const perView = 4;
 
-      if(dotsWrap){
-        dotsWrap.innerHTML = '';
-        for(let i = 0; i < totalPages; i++){
-          const d = document.createElement('button');
-          d.className = 'prod-dot' + (i === 0 ? ' on' : '');
-          d.setAttribute('aria-label', `Halaman ${i + 1}`);
-          d.addEventListener('click', () => scrollToPage(track, i));
-          dotsWrap.appendChild(d);
-        }
+    const catMeta = {
+      all:       { name: 'Semua Produk',          count: 24, icon: 'fa-layer-group', color: '#00E5FF' },
+      ai:        { name: 'Artificial Intelligence',count: 6,  icon: 'fa-brain',       color: '#00E5FF' },
+      ea:        { name: 'EA / Robot Trading',    count: 7,  icon: 'fa-robot',       color: '#00FFA3' },
+      indikator: { name: 'Indikator TradingView', count: 3,  icon: 'fa-chart-line',  color: '#A855F7' },
+      strategi:  { name: 'Strategi MT5',          count: 5,  icon: 'fa-chess-knight',color: '#FBBF24' },
+      fitur:     { name: 'Fitur Pendukung',       count: 3,  icon: 'fa-tools',       color: '#F87171' }
+    };
+
+    let currentCat = 'all';
+
+    function renderDots(){
+      if(!dotsWrap) return;
+      const visibleSlots = allSlots.filter(s => s.style.display !== 'none');
+      const totalPages = Math.max(1, Math.ceil(visibleSlots.length / perView));
+      dotsWrap.innerHTML = '';
+      for(let i = 0; i < totalPages; i++){
+        const d = document.createElement('button');
+        d.className = 'prod-dot' + (i === 0 ? ' on' : '');
+        d.setAttribute('aria-label', `Halaman ${i + 1}`);
+        d.addEventListener('click', () => scrollToPage(i));
+        dotsWrap.appendChild(d);
       }
+    }
 
-      let scrollTimer = null;
-      track.addEventListener('scroll', () => {
-        if(scrollTimer) clearTimeout(scrollTimer);
-        scrollTimer = setTimeout(() => {
-          const maxScroll = track.scrollWidth - track.clientWidth;
-          const ratio = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
-          const activeIdx = Math.round(ratio * (totalPages - 1));
-          if(dotsWrap){
-            dotsWrap.querySelectorAll('.prod-dot').forEach((d, i) => {
-              d.classList.toggle('on', i === activeIdx);
-            });
-          }
-        }, 80);
-      }, { passive: true });
-
-      let isDown = false, startX = 0, startScroll = 0;
-      track.addEventListener('mousedown', e => {
-        isDown = true;
-        startX = e.pageX - track.offsetLeft;
-        startScroll = track.scrollLeft;
-        track.style.scrollSnapType = 'none';
-        track.style.cursor = 'grabbing';
-      });
-      track.addEventListener('mouseleave', () => { isDown = false; track.style.cursor = ''; track.style.scrollSnapType = ''; });
-      track.addEventListener('mouseup', () => { isDown = false; track.style.cursor = ''; track.style.scrollSnapType = ''; });
-      track.addEventListener('mousemove', e => {
-        if(!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - track.offsetLeft;
-        track.scrollLeft = startScroll - (x - startX) * 1.5;
-      });
-
-      track.addEventListener('keydown', e => {
-        if(e.key === 'ArrowRight'){ e.preventDefault(); scrollNext(track); }
-        if(e.key === 'ArrowLeft'){ e.preventDefault(); scrollPrev(track); }
-      });
-      track.setAttribute('tabindex', '0');
-    });
-
-    function scrollToPage(track, pageIdx){
-      const slots = track.querySelectorAll('.prod-card-slot');
-      if(!slots.length) return;
-      const perPage = 4;
-      const targetIdx = Math.min(pageIdx * perPage, slots.length - 1);
-      const slot = slots[targetIdx];
+    function scrollToPage(pageIdx){
+      const visibleSlots = allSlots.filter(s => s.style.display !== 'none');
+      const targetIdx = Math.min(pageIdx * perView, visibleSlots.length - 1);
+      const slot = visibleSlots[targetIdx];
       if(!slot) return;
       const left = slot.offsetLeft - track.offsetLeft;
       track.scrollTo({ left, behavior: 'smooth' });
     }
 
-    function scrollNext(track){
-      const step = track.clientWidth;
+    function scrollNext(){
+      const visibleSlots = allSlots.filter(s => s.style.display !== 'none');
+      const totalPages = Math.ceil(visibleSlots.length / perView);
       const maxScroll = track.scrollWidth - track.clientWidth;
-      const next = Math.min(track.scrollLeft + step, maxScroll);
-      track.scrollTo({ left: next, behavior: 'smooth' });
+      const ratio = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
+      const currentPage = Math.round(ratio * (totalPages - 1));
+      scrollToPage(Math.min(currentPage + 1, totalPages - 1));
     }
 
-    function scrollPrev(track){
-      const step = track.clientWidth;
-      const next = Math.max(track.scrollLeft - step, 0);
-      track.scrollTo({ left: next, behavior: 'smooth' });
+    function scrollPrev(){
+      const visibleSlots = allSlots.filter(s => s.style.display !== 'none');
+      const totalPages = Math.ceil(visibleSlots.length / perView);
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      const ratio = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
+      const currentPage = Math.round(ratio * (totalPages - 1));
+      scrollToPage(Math.max(currentPage - 1, 0));
     }
 
-    document.querySelectorAll('.prod-nav').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const cat = btn.dataset.cat;
-        const track = document.querySelector(`.prod-track[data-track="${cat}"]`);
-        if(!track) return;
-        if(btn.dataset.dir === 'next') scrollNext(track);
-        else scrollPrev(track);
+    function filterCategory(cat){
+      currentCat = cat;
+      const meta = catMeta[cat];
+      if(catInfo && meta){
+        catInfo.innerHTML = `
+          <div class="w-10 h-10 rounded-lg grid place-items-center flex-shrink-0" style="background:${meta.color}15;border:1px solid ${meta.color}40">
+            <i class="fas ${meta.icon}" style="color:${meta.color}"></i>
+          </div>
+          <div>
+            <h3 class="text-base md:text-lg disp font-bold text-white">${meta.name}</h3>
+            <p class="text-[0.6rem] mono uppercase tracking-wider" style="color:${meta.color}99">${meta.count} Produk</p>
+          </div>
+        `;
+      }
+
+      allSlots.forEach(slot => {
+        if(cat === 'all' || slot.dataset.cat === cat){
+          slot.style.display = '';
+          slot.style.animation = 'none';
+          void slot.offsetWidth;
+          slot.style.animation = 'fadeIn .4s ease forwards';
+        } else {
+          slot.style.display = 'none';
+        }
       });
-    });
+
+      track.scrollTo({ left: 0, behavior: 'auto' });
+      renderDots();
+    }
 
     document.querySelectorAll('#prodFilter .tab').forEach(tab => {
       tab.addEventListener('click', () => {
@@ -1193,17 +1109,58 @@ tabs.forEach(t => {
         });
         tab.classList.add('on');
         tab.setAttribute('aria-selected','true');
-        const cat = tab.dataset.cat;
-        const target = document.querySelector(`.prod-cat[data-cat="${cat}"]`);
-        if(target){
-          const y = target.getBoundingClientRect().top + window.pageYOffset - 100;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
+        filterCategory(tab.dataset.cat);
       });
     });
 
-    const firstTab = document.querySelector('#prodFilter .tab');
-    if(firstTab) firstTab.classList.add('on');
+    document.querySelectorAll('.prod-nav').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if(btn.dataset.dir === 'next') scrollNext();
+        else scrollPrev();
+      });
+    });
+
+    let scrollTimer = null;
+    track.addEventListener('scroll', () => {
+      if(scrollTimer) clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        const visibleSlots = allSlots.filter(s => s.style.display !== 'none');
+        const totalPages = Math.max(1, Math.ceil(visibleSlots.length / perView));
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const ratio = maxScroll > 0 ? track.scrollLeft / maxScroll : 0;
+        const activeIdx = Math.round(ratio * (totalPages - 1));
+        if(dotsWrap){
+          dotsWrap.querySelectorAll('.prod-dot').forEach((d, i) => {
+            d.classList.toggle('on', i === activeIdx);
+          });
+        }
+      }, 80);
+    }, { passive: true });
+
+    let isDown = false, startX = 0, startScroll = 0;
+    track.addEventListener('mousedown', e => {
+      isDown = true;
+      startX = e.pageX - track.offsetLeft;
+      startScroll = track.scrollLeft;
+      track.style.scrollSnapType = 'none';
+      track.style.cursor = 'grabbing';
+    });
+    track.addEventListener('mouseleave', () => { isDown = false; track.style.cursor = ''; track.style.scrollSnapType = ''; });
+    track.addEventListener('mouseup', () => { isDown = false; track.style.cursor = ''; track.style.scrollSnapType = ''; });
+    track.addEventListener('mousemove', e => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      track.scrollLeft = startScroll - (x - startX) * 1.5;
+    });
+
+    track.addEventListener('keydown', e => {
+      if(e.key === 'ArrowRight'){ e.preventDefault(); scrollNext(); }
+      if(e.key === 'ArrowLeft'){ e.preventDefault(); scrollPrev(); }
+    });
+    track.setAttribute('tabindex', '0');
+
+    renderDots();
   }
 
   if(document.readyState === 'loading'){
